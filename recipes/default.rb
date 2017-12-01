@@ -59,3 +59,17 @@ end
 execute 'installing Python libraries' do
   command "pip install -r #{conf['data'][0]["DGallery_dir"]}/DymbolGallery/requirements.txt"
 end
+
+#configuring DGallery
+template "#{conf['data'][0]["DGallery_dir"]}/DymbolGallery/DymbolGallery/settings.py" do
+  source 'settings.erb'
+  owner conf['data'][0]["run_user"]
+  group conf['data'][0]["run_group"]
+  mode '0755'
+  variables (
+        :DGallery_dir => conf['data'][0]["DGallery_dir"],
+        :albums_dir => conf['data'][0]["albums_dir"]
+    )
+end
+
+puts node["conf"]
