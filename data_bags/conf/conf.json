@@ -10,6 +10,7 @@
 				}
 		],
 		"packages" : [
+				"python2-pip",
 				"git",
 			  "jbigkit-libs",
 			  "lcms2",

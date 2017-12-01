@@ -54,3 +54,8 @@ git conf['data'][0]["DGallery_dir"] do
   revision 'master'
   action :sync
 end
+
+#install python requierments
+execute 'installing Python libraries' do
+  command "pip install -r #{conf['data'][0]["DGallery_dir"]}/DymbolGallery/requirements.txt"
+end
