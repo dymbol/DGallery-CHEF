@@ -39,8 +39,6 @@ end
 #end
 
 ####################configure and install DGallery
-#puts conf['data'][0]["albums_dir"]
-puts "Creating required dirs"
 [conf['data'][0]["DGallery_dir"] , conf['data'][0]["albums_dir"]].each do |new_dir|
   directory new_dir do
    owner conf['data'][0]["run_user"]
@@ -48,4 +46,11 @@ puts "Creating required dirs"
    mode '0755'
    action :create
   end
+end
+
+#get newest app from github
+git conf['data'][0]["DGallery_dir"] do
+  repository conf['data'][0]["github_src"]
+  revision 'master'
+  action :sync
 end

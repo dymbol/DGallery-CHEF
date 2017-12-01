@@ -5,10 +5,12 @@
 					"albums_dir": "/home/dymbol/DGallery_albums",
 					"DGallery_dir": "/home/dymbol/DGallery",
 					"run_user": "dymbol",
-					"run_group": "dymbol"
+					"run_group": "dymbol",
+					"github_src": "https://github.com/dymbol/DGallery.git"
 				}
 		],
 		"packages" : [
+				"git",
 			  "jbigkit-libs",
 			  "lcms2",
 			  "lcms2-devel",
