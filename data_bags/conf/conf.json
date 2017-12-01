@@ -1,0 +1,31 @@
+{
+		"id": "conf",
+		"data": [
+				{
+					"albums_dir": "/home/dymbol/DGallery_albums",
+					"DGallery_dir": "/home/dymbol/DGallery",
+					"run_user": "dymbol",
+					"run_group": "dymbol"
+				}
+		],
+		"packages" : [
+			  "jbigkit-libs",
+			  "lcms2",
+			  "lcms2-devel",
+			  "libimagequant",
+			  "libjpeg-turbo",
+			  "libjpeg-turbo-devel",
+			  "libtiff",
+			  "libtiff-devel",
+			  "libwebp",
+			  "openjpeg2",
+			  "openjpeg2-devel",
+			  "python2-olefile",
+			  "zlib",
+			  "zlib-devel",
+			  "gcc",
+			  "redhat-rpm-config",
+			  "python2-devel",
+			  "ffmpeg"
+		]
+}
